@@ -1,0 +1,24 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+p {
+  color: blue;
+}
+
+p.paragraph-text {
+  color: crimson;
+}
+p#paragraph-text {
+  color: red;
+  font-size: 4em;
+  font-style: italic;
+  font-weight: 900;
+  background-color: aqua;
+  width: 50%;
+  margin: 100px auto;
+  text-align: center;
+  padding: 20px;
+}

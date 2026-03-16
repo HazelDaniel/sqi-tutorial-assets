@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #f2f7f8;
+}
+nav {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+}
+.header-left {
+  display: flex;
+  gap: 4em;
+  align-items: center;
+}
+.menu-list {
+  display: flex;
+  gap: 1.2em;
+}
+.menu-list li {
+  list-style-type: none;
+}
+.menu-list li a {
+  text-decoration: none;
+  color: #3c4e5f;
+  font-size: 1.2em;
+  font-weight: 400;
+}
+
+.header-right {
+  display: flex;
+  gap: 1em;
+}
+.create-btn {
+  padding: 14px 18px;
+  background-color: #0c1825;
+  border-radius: 5px;
+  border: none;
+}
+
+.create-btn a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+.signin-btn {
+  padding: 14px 18px;
+  border-radius: 5px;
+  border: thin solid #0c1825;
+  background-color: transparent;
+}
+.signin-btn a {
+  text-decoration: none;
+  color: #0c1825;
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+.container {
+  border: 2px solid black;
+  display: flex;
+  padding: 10px;
+  justify-content: space-evenly;
+}
+
+.cards {
+  width: 400px;
+  height: 300px;
+  border: 2px solid crimson;
+}
+
+.card1 {
+  /* background-color: black; */
+  background-color: rgb(15, 105, 15);
+}
+
+.card1 h1 {
+  color: white;
+}
+
+.card2 {
+  /* background-color: #222; */
+  background-color: rgb(37, 128, 37);
+}
+.card2 h1 {
+  color: aliceblue;
+}
+
+.card3 {
+  /* background-color: rgb(53, 49, 49); */
+  background-color: green;
+}
+.card3 h1 {
+  color: white;
+}

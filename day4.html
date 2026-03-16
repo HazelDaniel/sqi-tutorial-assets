@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      form {
+        border: 1px solid black;
+        width: 50%;
+        margin: 100px auto;
+        padding: 10px;
+      }
+      input,
+      select {
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <h1 style="text-align: center">sign up</h1>
+      <label for="firstname">First name: </label>
+      <input type="text" id="firstname" placeholder="e.g John" />
+      <br />
+      <label for="lastname"> lastname: </label>
+      <input type="text" name="" id="lastname" placeholder="e.g Doe" />
+      <br />
+      <label for="username">username: </label>
+      <input type="text" name="" id="username" placeholder="e.g johndoe123" />
+      <br />
+      <label for="email">Email: </label>
+      <input type="email" name="" id="email" placeholder="example@gmail.com" />
+      <br />
+      <br />
+      <label for="gender">Gender:</label>
+      <select name="" id="gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="others">Custom</option>
+      </select>
+      <br />
+      <label for="paddword">password</label>
+      <input type="password" name="" id="" required />
+      <br />
+      <label for="phonenumber">Phone-Number</label>
+      <input type="number" name="" id="" />
+      <br>
+      <label for="dob"> Date of birth</label>
+      <input type="datetime-local" name="" id="">
+      <br>
+      <p>Do you agree to this policy? <input type="checkbox" name="" id=""> </p>
+
+      <br />
+      <button type="submit">submit</button>
+    </form>
+  </body>
+</html>

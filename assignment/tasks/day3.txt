@@ -1,0 +1,12 @@
+image
+biography
+
+anchor tag (on click navigates to another person's page, say mentor)
+
+on the destination page:
+anchor tag (on click navigates back to our previous page)
+
+
+notes:
+images stay inside the images folder.
+

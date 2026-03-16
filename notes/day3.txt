@@ -1,0 +1,5 @@
+
+- you can write an inline element within the inline element
+-you can write a block within a block level element
+-you can write an inline within a block level element
+- you cannot write a block level element inside an inline element

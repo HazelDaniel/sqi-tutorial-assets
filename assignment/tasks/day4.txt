@@ -1,0 +1,7 @@
+create a signup page
+after they filled all the signup details, you make it required
+by the time they click on submit, it takes us to the blog page.
+
+- make sure the form is validated
+
+
