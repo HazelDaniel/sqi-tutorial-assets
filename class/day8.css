@@ -4,16 +4,6 @@
   box-sizing: border-box;
 }
 
-:root {
-  --color-first: red;
-  --color-second: red;
-  --color-third: red;
-  --color-fourth: red;
-  --color-fifth: red;
-  --color-sixth: red;
-  --color-seventh: red;
-}
-
 body {
   display: flex;
   position: relative;
