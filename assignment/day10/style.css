@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.parent-frame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  height: 70vh;
+  border: 5px solid black;
+  gap: 50px;
+}
+
+.speaker {
+  width: 180px;
+  height: 300px;
+  background-color: black;
+}
+
+.monitor-frame {
+  width: 320px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.monitor-screen {
+  width: 100%;
+  height: 240px;
+  border: 10px solid black;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 0;
+  display: flex;
+}
+
+.monitor-screen .blue-background {
+  width: 100%;
+  height: 100%;
+  background-color: #87cfeb9f;
+}
+
+.monitor-screen img {
+  position: absolute;
+  left: 0;
+}
+
+.monitor-screen .stadium-background {
+  width: 100%;
+  bottom: 0;
+  min-height: 70%;
+}
+
+.monitor-screen .player2,
+.monitor-screen .player1 {
+  bottom: 0;
+}
+
+.monitor-screen .player2 {
+  height: 100px;
+  bottom: 6px;
+}
+
+.monitor-screen .player1 {
+  left: unset;
+  right: 0;
+  height: 100px;
+}
+
+.monitor-screen .ball {
+  bottom: 6px;
+  left: 18%;
+  animation-name: pass;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.monitor-neck {
+  width: 50px;
+  height: 24px;
+  background-color: black;
+}
+
+.monitor-base {
+  width: 50%;
+  height: 30px;
+  background-color: black;
+  border-radius: 50%;
+  margin-top: -2px;
+}
+
+.speaker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.speaker .circle-white {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background-color: white;
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.speaker .circle-black {
+  width: 50%;
+  height: 50%;
+  background-color: black;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  animation-name: popping;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+}
+
+.speaker .circle-black:hover {
+  background-color: blue;
+  transform: scale(1.05);
+}
+
+@keyframes pass {
+  0% {
+    left: 18%;
+    transform: rotateZ(0deg);
+  }
+  50% {
+    left: 75%;
+  }
+  100% {
+    transform: rotateZ(360deg);
+    left: 20%;
+  }
+}
+
+@keyframes popping {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(2px) translateY(2px);
+  }
+  100% {
+    transform: translateX(0) translateY(4px);
+  }
+}
