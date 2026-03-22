@@ -46,10 +46,15 @@ body {
   display: flex;
 }
 
+.monitor-screen:hover .blue-background {
+  background-color: #f12c2c9f;
+}
+
 .monitor-screen .blue-background {
   width: 100%;
   height: 100%;
   background-color: #87cfeb9f;
+  transition: background 0.2s linear;
 }
 
 .monitor-screen img {
