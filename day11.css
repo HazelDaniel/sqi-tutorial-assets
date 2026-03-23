@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hero-sect {
+  width: 100%;
+  border: thin solid black;
+  background-image: url(./images/hero-image.png);
+  background-repeat: no-repeat;
+  height: 60vh;
+  position: relative;
+}

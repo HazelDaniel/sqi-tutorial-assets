@@ -1,0 +1,301 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(
+    to bottom,
+    #faf7f7 0%,
+    #86ebbc 25%,
+    #87ebbc 45%
+  );
+}
+
+.sun {
+  position: absolute;
+  top: 2rem;
+  right: 3.2rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  box-shadow: 2px 2px 0.8rem yellow;
+  background-image: radial-gradient(circle at center, #ffd000 20%, yellow);
+}
+
+.cloud {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: white;
+  transform: translateX(0);
+  animation-name: cloud-move;
+  animation-duration: 60s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  opacity: 0.8;
+}
+
+.cloud::before {
+  position: absolute;
+  content: "";
+  width: 100px;
+  height: 80px;
+  bottom: 0;
+  background-color: white;
+  border-radius: inherit;
+  transform: rotateZ(20deg);
+  transform-origin: bottom;
+}
+
+.cloud::after {
+  position: absolute;
+  content: "";
+  width: 100px;
+  height: 80px;
+  bottom: 0;
+  background-color: white;
+  /* background-color: blue; */
+  border-radius: inherit;
+  transform: rotateZ(-40deg);
+  transform-origin: top;
+}
+
+.cloud1 {
+  margin-top: 48px;
+  margin-left: 468px;
+  animation-delay: 0s;
+}
+
+.cloud2 {
+  margin-top: -28px;
+  margin-left: 202px;
+  animation-delay: 0.4s;
+}
+
+.cloud3 {
+  margin-top: -48px;
+  margin-left: 8px;
+  animation-delay: 0.8s;
+}
+
+.building {
+  position: absolute;
+  width: 4rem;
+  height: 8rem;
+  background-color: #f1f1f1;
+  left: calc((var(--position) * 100px) + var(--position) * 20px);
+  bottom: 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  border-top-right-radius: 2px;
+  border-top-left-radius: 2px;
+  border: 2px solid #3a3a3a70;
+}
+
+.building > div {
+  width: 100%;
+  height: 8px;
+  background-color: #00aeff;
+}
+
+.building2 {
+  height: 6rem;
+}
+
+.building .roof {
+  background-color: #c7c7c7;
+}
+
+.building .window-strip {
+  width: 70%;
+}
+
+.tree {
+  position: absolute;
+  display: flex;
+  height: 5.2rem;
+  width: 1rem;
+  background-color: #b65607;
+  flex-direction: column;
+  align-items: center;
+  left: calc((var(--position) * 100px) + var(--position) * 30px + 380px);
+  overflow: visible;
+  bottom: 6rem;
+}
+
+.tree .tree-top {
+  width: 90px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #1aa51a;
+  transform: translateY(-50%);
+}
+
+.van {
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  margin-bottom: 0;
+  bottom: 6.2rem;
+  background-color: #ffee00;
+  overflow: visible;
+  border: 2px solid black;
+  display: flex;
+  left: 0;
+  animation: van-move 8s linear infinite;
+}
+
+.van .van-body {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.van .van-body .tires {
+  position: absolute;
+  bottom: 0;
+  overflow: visible;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  left: 1.8rem;
+}
+
+.van .van-body .tires .tire {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background-color: white;
+  transform: translateY(50%);
+  border: 6px solid black;
+  outline: 2px solid black;
+}
+
+.van .van-body::before {
+  position: absolute;
+  content: "";
+  right: -52px;
+  width: 50px;
+  bottom: 0;
+  height: 68%;
+  background-color: #ffee00;
+  border-top-right-radius: 2rem;
+  z-index: 2;
+  border: 2px solid black;
+}
+
+.van-body .window {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border: 2px solid black;
+}
+
+.van-body .exhaust {
+  position: absolute;
+  left: -20px;
+  bottom: -10px;
+  width: 20px;
+  height: 2rem;
+  display: flex;
+}
+
+.van-body .exhaust .smoke {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.van-body .exhaust .smoke::before {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 45%;
+  width: 8px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #ff3324;
+  z-index: 2;
+  transform: scaleX(0);
+  animation: exhaust-fume 0.2s linear infinite;
+}
+
+.van-body .exhaust .smoke::after {
+  position: absolute;
+  content: "";
+  right: 2%;
+  top: 45%;
+  width: 8px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: orange;
+  z-index: 2;
+  animation: exhaust-fume 0.3s linear infinite;
+}
+
+.road {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 6rem;
+  background-color: #161616;
+  display: flex;
+  align-items: center;
+}
+
+.road .road-line {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 0.5rem;
+  background-image: repeating-linear-gradient(
+    to right,
+    #ffe606 0,
+    #ffe606 30px,
+    transparent 30px,
+    transparent 60px
+  );
+}
+
+@keyframes cloud-move {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+}
+
+@keyframes van-move {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes exhaust-fume {
+  to {
+    right: 100%;
+    transform: scaleX(2);
+    opacity: 0;
+  }
+}

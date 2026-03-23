@@ -47,7 +47,7 @@ body {
 }
 
 .monitor-screen:hover .blue-background {
-  background-color: #f12c2c9f;
+  background-color: white;
 }
 
 .monitor-screen .blue-background {
@@ -134,6 +134,8 @@ body {
   animation-name: popping;
   animation-duration: 0.8s;
   animation-iteration-count: infinite;
+  transition-delay: 1s;
+  transition-duration: 2s;
 }
 
 .speaker .circle-black:hover {
