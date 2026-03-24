@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+header {
+  background-color: whitesmoke;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+}
+
+nav {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px;
+}
+
+.menu-list {
+  display: flex;
+  gap: 2em;
+}
+
+.menu-list li a {
+  font-size: 1.2em;
+  color: #222;
+}
+
+.btn-icon {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.btn {
+  padding: 14px 20px;
+  background-color: #e0a846;
+  border-radius: 5px;
+  border: none;
+  transition: all 2s ease;
+}
+
+.btn a {
+  color: #222;
+  font-size: 1.2em;
+}
+
+.btn:hover {
+  background-color: bisque;
+  transform: translateY(-5px);
+}
+
+.fa-bars {
+  font-size: 2em;
+  display: none;
+}
+
+.about-us {
+  position: relative;
+}
+
+.dropdown-menu {
+  border: thin solid black;
+  width: 200px;
+  text-align: center;
+  padding: 2em;
+  background-color: white;
+  border-radius: 10px;
+  line-height: 2.2em;
+  position: absolute;
+  left: -50px;
+  display: none;
+}
+
+.about-us:hover .dropdown-menu {
+  display: block;
+}
+
+@media (max-width: 950px) {
+  nav {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .menu-list {
+    display: none;
+  }
+  .btn {
+    display: none;
+  }
+  .fa-bars {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/**
+  Hero section styling
+*/
+
+.hero-sect {
+  position: relative;
+  top: 120px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+}
+
+.hero-text h1 {
+  font-size: 3em;
+  color: #222;
+}
+
+.hero-text h1 span {
+  display: block;
+  background-image: linear-gradient(to right, #222, gold);
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-text p {
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+
+.hero-text a {
+  padding: 12px 30px;
+  background-color: #553225;
+  color: white;
+  border-radius: 5px;
+}
+
+.hero-image {
+  width: 400px;
+}
