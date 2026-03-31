@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hero-sect {
+  border: thin solid black;
+}
+
+.slide_2 {
+  border: 2px solid red;
+  height: 60vh;
+}
+
+.carousel-item {
+  position: relative;
+}
+
+.slideOneText {
+  position: absolute;
+  top: 10rem;
+  right: 8rem;
+  width: 20rem;
+  border: 2px solid black;
+  padding: 2rem 4rem;
+}
+.carousel-item img {
+}
+.carousel-indicators {
+  display: flex;
+  justify-content: flex-end;
+}
